@@ -1,0 +1,103 @@
+<html>
+    <head>
+        <title>AccuFi</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital@0;1&display=swap" rel="stylesheet">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        
+        <div class="sidebar"> 
+            <div class="logo"></div>
+            <ul class="menu">
+                <li>
+                    <a href="index.html">
+                        <i class='bx bxs-dashboard' ></i>
+                    <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class='bx bxs-file-doc' ></i>
+                    <span>Voucher</span>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="report.html">
+                        <i class='bx bxs-report' ></i>
+                    <span>Reports</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class='bx bxs-cog' ></i>
+                    <span>Settings</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class='bx bx-transfer' ></i>
+                    <span>Transaction</span>
+                    </a>
+                </li>
+                <li class="logout">
+                    <a href="#">
+                        <i class='bx bxs-log-out' ></i>
+                    <span>Log out</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <div class="header-wrapper">
+                <div class="header-title">
+                    <h2>Reports</h2>
+                </div>
+                <div class="user-info">
+                <div class="search-box">
+                        <i class='bx bx-search' ></i>
+                    <input type="text" placeholder="Search...">
+                </div>
+                <img src="/Accounting/image/Profile.png" alt="">
+                </div>
+            </div>
+
+            <div class="card-container">
+					<div class="panel-body">
+					<!--
+                            <p style="font-size:16px; color:red" align="center"> 
+							    <?php if($msg){echo $msg;}?> 
+						    </p>
+                    -->
+						<div class="col-md-12">
+					
+							<form role="form" method="post" action="report-expense.html" name="bwdatesreport">
+								<div class="form-group">
+									<label>From Date</label> <br>
+									<input class="form-control" type="date"  id="fromdate" name="fromdate" required="true">
+								</div>
+								<div class="form-group">
+									<label>To Date</label> <br>
+									<input class="form-control" type="date"  id="todate" name="todate" required="true">
+								</div>
+								</div>
+                                <div class="form-group has-success"> 
+									<button type="submit" class="btn btn-primary" name="submit">Submit</button>
+								</div>
+								
+							</form>
+						</div>
+
+					</div>
+            </div>
+
+        </div>
+        
+        
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="main.js"></script>
+    </body>
+</html>

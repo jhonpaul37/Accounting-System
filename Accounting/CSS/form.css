@@ -1,0 +1,42 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+.container{
+    width:794px;
+    height:1123px;
+    padding:30px;
+    padding-top:0;
+    border:solid 2px;
+    display:inline-block;
+    
+}
+.print-area{
+    display:inline-block;
+    vertical-align:top;
+}
+table{
+    border:1px solid black;
+    width:100%;
+    border-collapse: collapse;
+}
+td{
+    border:1px solid;
+    border-collapse: collapse;
+    text-align:center;
+    font-size:12px;
+}
+.payee{
+    width:100%;
+    border:none;
+}
+.address{
+    width:100%;
+    border:none;
+}
+.particulars,.amount{
+    border:none;
+    width:100%;
+    height:100%;
+}

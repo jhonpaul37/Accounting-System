@@ -1,0 +1,213 @@
+<html>
+    <head>
+        <title>AccuFi</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital@0;1&display=swap" rel="stylesheet">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        
+        <div class="sidebar"> 
+            <div class="logo"></div>
+            <ul class="menu">
+                <li class="active">
+                    <a href="#">
+                        <i class='bx bxs-dashboard' ></i>
+                    <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class='bx bxs-file-doc' ></i>
+                    <span>Voucher</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="report.html">
+                        <i class='bx bxs-report' ></i>
+                    <span>Reports</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class='bx bxs-cog' ></i>
+                    <span>Settings</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class='bx bx-transfer' ></i>
+                    <span>Transaction</span>
+                    </a>
+                </li>
+                <li class="logout">
+                    <a href="#">
+                        <i class='bx bxs-log-out' ></i>
+                    <span>Log out</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <div class="header-wrapper">
+                <div class="header-title">
+                    <h2>Dashboard</h2>
+                </div>
+                <div class="user-info">
+                <div class="search-box">
+                        <i class='bx bx-search' ></i>
+                    <input type="text" placeholder="Search...">
+                </div>
+                <img src="/Accounting/image/Profile.png" alt="">
+                </div>
+            </div>
+
+            <div class="card-container">
+                <h3 class="main-title">Today's data</h3>
+                <div class="card-wrapper">
+                    <div class="clusters-card Cluster-01">
+                        <div class="card-header">
+                            <div class="ammount">
+                                <span class="title">
+                                    Total Balance
+                                </span> <br>
+                                <span class="amount-value"> ₱5,674,152.00</span>
+                            </div>
+                        </div>
+                        <span class="cluster-code"> Cluster 01</span>
+                    </div>
+
+                    <div class="clusters-card Cluster-02">
+                        <div class="card-header">
+                            <div class="ammount">
+                                <span class="title">
+                                    Total Balance
+                                </span> <br>
+                                <span class="amount-value"> ₱5,786,455.00</span>
+                            </div>
+                        </div>
+                        <span class="cluster-code"> Cluster 02</span>
+                    </div>
+
+                    <div class="clusters-card Cluster-03">
+                        <div class="card-header">
+                            <div class="ammount">
+                                <span class="title">
+                                    Total Balance
+                                </span> <br>
+                                <span class="amount-value"> ₱5,500,456.00</span>
+                            </div>
+                        </div>
+                        <span class="cluster-code"> Cluster 03</span>
+                    </div>
+
+                    <div class="clusters-card Cluster-04">
+                        <div class="card-header">
+                            <div class="ammount">
+                                <span class="title">
+                                    Total Balance
+                                </span> <br>
+                                <span class="amount-value"> ₱5,986,000.00</span>
+                            </div>
+                        </div>
+                        <span class="cluster-code"> Cluster 04</span>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div id="wrapper-div">
+                <div id="main-div" class="clearfix">
+                    
+                    <div class="body-stats">
+
+                        <div class="cluster-left-stat"> 
+                            <p class="chart-title">Monthly Expenses</p>
+                                <div class="bar-chart-container">
+                                    <canvas class="bar-chart"></canvas>
+                                </div>
+                        </div>
+                        
+                            <div class="cluster-right-stat"> 
+                                <p class="chart-title">Expenses</p>
+                                <div class="doughnut-chart-container">
+                                    <canvas class="doughnut-chart"></canvas>
+                                </div>
+                                <div class="clusters">
+                                    <table class="cluster">
+                                        <thead>
+                                            <tr>
+                                                <th>Cluster 01</th>
+                                                <th>Cluster 02</th>
+                                            </tr>
+                                            <tr>
+                                                <th>Cluster 03</th>
+                                                <th>Cluster 04</th>
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+                            </div>
+    
+                            
+                    </div>
+
+                </div>
+                <div class="recent-activities">
+                    <h3 class="main-title">Recent Activities</h3>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>JEV Number</th>
+                                    <th>DV Number</th>
+                                    <th>Description</th>
+                                    <th>Date</th>
+                                    <th>Client Name</th>
+                                    <th>Amount</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>2310-101-CHKDJ-0009</td>
+                                        <td>2310-101-0009</td>
+                                        <td>Office supplies</td>
+                                        <td>2023-11-01</td>
+                                        <td>jhnpaul</td>
+                                        <td>₱14,000</td>
+                                        <td>Pending</td>
+                                        <td><button>Edit</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2310-101-CHKDJ-0009</td>
+                                        <td>2310-101-0009</td>
+                                        <td>Office supplies</td>
+                                        <td>2023-11-01</td>
+                                        <td>jhnpaul</td>
+                                        <td>₱14,000</td>
+                                        <td>Pending</td>
+                                        <td><button>Edit</button></td>
+                                    </tr>
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <td colspan="8">Total: ₱21,000</td>
+                                    </tr>
+                                </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="main.js"></script>
+    </body>
+</html>

@@ -1,0 +1,87 @@
+:root{
+    --WColor: #F6FAFD;
+    --BGColor: #5F1315;
+    --FColor: #717171;
+    --HColor: #F0C519;
+}
+.card-body-cluster{
+    background: var(--WColor);
+    padding: 10px;
+    border-radius: 10px;
+}
+.title{
+    font-size: 12px;
+    font-weight: 200;
+}
+.cluster-code{
+    font-size: 18px;
+    color: var(--FColor);
+    letter-spacing: 2px;
+    font-weight: 300;
+    font-family: 'Courier New', Courier, monospace;
+}
+.amount-value{
+    color: #000000;
+    font-size: 24px;
+    font-weight: 600;
+    
+}
+
+/*                 Button                   */
+.btn_custom {
+    background-color: #F0C519;
+    color: #000000;
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    transition: 0.3s ease; 
+  }
+  .btn_custom:hover {
+    background-color: #fad43c; 
+  }
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: #F0C519;
+}
+
+/*                Table              */
+.table-container{
+    width: 100%;
+}
+.table-container table{
+    width: 100%;
+    border-collapse: collapse;
+}
+.table-container thead{
+    background: var(--BGColor);
+    color: #fff;
+}
+.table-container th{
+    padding: 15px;
+    text-align: left;
+}
+.table-container tbody{
+    background: #e9e9e9;
+}
+tr:nth-child(even){
+    background: var(--WColor);
+}
+.table-container td{
+    padding: 15px;
+    font-size: 14px;
+}
+.table-container tfoot td{
+    background: var(--BGColor);
+    font-weight: bold;
+    color: #fff;
+}
+.table-container button{
+    border: none;
+    color: green;
+    background: none;
+    cursor: pointer;
+}
+/*                report              */
+.form-group{
+    padding: 5px;
+}
