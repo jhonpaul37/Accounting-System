@@ -10,7 +10,9 @@
         <form class="container" action="add_voucher.php" method="post">    
         
 
+        <div id="header">
             <img src="header.png" alt="BSC-header" style="margin-left:-13px; height:90px; width:100%;">
+        </div>
             <div>
                 <table >
                     <tr colspan="6">
@@ -23,7 +25,6 @@
                                 $sqlClusters = "SELECT F_cluster FROM fund_clusters";
                                 $resultClusters = mysqli_query($conn, $sqlClusters);
 
-                                // Check Cluster
                                 if ($resultClusters && mysqli_num_rows($resultClusters) > 0) {
                                     while ($rowCluster = mysqli_fetch_assoc($resultClusters)) {
                                         echo "<option value='" . $rowCluster['F_cluster'] . "'>" . $rowCluster['F_cluster'] . "</option>";
@@ -34,7 +35,7 @@
                             </td>
                     </tr>
                     <tr>
-                        <td>Date:</td>
+                        <td>Date:<input type="text" id="dateInputId" /></td>
                     </tr>
                     <td>DV.No: </td>
 
@@ -47,7 +48,7 @@
                     </tr>
                     <tr colspan ="5">
                         <td >Payee</td>
-                        <td colspan = "2"><input class="payee" tpye="text"></td>
+                        <td colspan = "2"><input class="payee" type="text"></td>
                         <td>Tin/Employee No.:</td>
                         <td>ORS/BURS No.</td>
                     </tr>
@@ -246,12 +247,50 @@
                 </table>
                             </div>
 
-            <footer>
-                <img src="footer.png" alt="footer" style="width:100%; height:97px;">
-            </footer>
+                <div id="footer">
+                    <img src="footer.png" alt="footer" style="width:100%; height:97px;">
+                </div>
         </form>
         <div class="print-area">
             <button onclick="printTable()">Print</button>
         </div>
+        <style>
+
+            #header,
+            #footer {
+                display: none; /* Hide by default */
+            }
+
+            @media print {
+                #header,
+                #footer {
+                    display: block; /* Show for printing */
+                }
+            }
+    </style>
+
+    <!-- Script to trigger printing -->
+    <script>
+        function printTable() {
+            window.print();
+        }
+    </script>
+    <!-- Add this script within the head or body section of your HTML -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var currentDate = new Date();
+            var day = currentDate.getDate();
+            var month = currentDate.getMonth() + 1; // Months are zero-based
+            var year = currentDate.getFullYear();
+
+            // Format the date as needed (e.g., MM/DD/YYYY)
+            var formattedDate = month + "/" + day + "/" + year;
+
+            // Set the formatted date in the corresponding input field
+            document.getElementById("dateInputId").value = formattedDate;
+        });
+    </script>
+
+
     </body>
 </html>

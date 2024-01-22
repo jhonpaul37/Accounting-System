@@ -26,6 +26,7 @@ include_once 'includes/dbconnect.php';
                     <div class="modal fade" id="addBalanceModal" tabindex="-1" role="dialog" aria-labelledby="addBalanceModalLabel" aria-hidden="true">
                       <div class="modal-dialog" role="document">
                         <div class="modal-content">
+
                           <form method="post" action="add_balance.php">
                             <div class="modal-header">
                               <h5 class="modal-title" id="addBalanceModalLabel">Add Balance</h5>
@@ -38,12 +39,9 @@ include_once 'includes/dbconnect.php';
                                 <label for="clusterSelect">Select Cluster:</label>
 
                                 <select class="form-control" id="clusterSelect" name="clusterCode">
-                                <!-- PHP code to populate dropdown options -->
                                   <?php
-                                    // Fetch cluster options from your database
                                     $sql = "SELECT * FROM fund_clusters";
                                     $result = mysqli_query($conn, $sql);
-
                                     if (mysqli_num_rows($result) > 0) {
                                       while ($row = mysqli_fetch_assoc($result)) {
                                         echo '<option value="' . $row['F_cluster'] . '">' . $row['F_cluster'] . '</option>';
@@ -63,6 +61,7 @@ include_once 'includes/dbconnect.php';
                               <button type="submit" class="btn btn_custom">Add</button>
                             </div>
                           </form>
+
                         </div>
                       </div>
                     </div>
@@ -153,8 +152,10 @@ include_once 'includes/dbconnect.php';
           </div>
     
     <!--Bootstrap-->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+
     
     <!--Charts-->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> 
